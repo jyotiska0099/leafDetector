@@ -1,0 +1,64 @@
+<!-- Code for the front end -->
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Leaf Classifier</title>
+  <link href="{{ url_for('static', filename='css/style.css') }}" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+     <p id="header-text"> Welcome to the leaf classifier </p>
+  </header>
+
+  <div class="container">
+    
+      <form action="/upload-image" method="POST" enctype="multipart/form-data" name="image_collection">
+      
+        <div class="form-group">
+          <label id="label1">Select image </label>
+          <input type="file" class="custom-file-input" name="leaf_image" id="image_selector" required onchange=" return fileTypeValidation()">
+        </div>
+      
+        <button type="submit" class="btn-primary">Upload and Check</button>
+
+      </form>
+  
+
+    <div class="showImage">
+      <div id="image_uploaded">
+        <img src={{ imagePath }} alt="uploaded_image">
+      </div>
+    </div>
+
+    <div class="message">
+      <p id="message_box">
+        {{ message_from_backend }}
+      </p>
+    </div>
+
+  </div>
+  <footer>
+    <p>&copy; made with &#128151 by Bijit, Tanya & Jyotiska</p>
+  </footer>
+
+   <!--Check the file extension of the uploaded image-->
+  <script type="text/javascript">
+      function fileTypeValidation() {
+        var fileInput = document.getElementById("image_selector");
+        var filePath = fileInput.value;
+        // Allowing file type 
+        var allowedExtensions =  /(\.jpg|\.jpeg)$/i;
+        if (!allowedExtensions.exec(filePath)) { 
+          alert('Invalid file type'); 
+          fileInput.value = ''; 
+          return false; 
+        }   
+      } 
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+header {
+	background: #9ACD32;
+	height: 55px;
+	margin: -17px -13px 20px -13px;
+	box-shadow: 5px 5px 5px grey;
+}
+
+#header-text {
+	padding: 15px 0 15px 20px;
+	text-shadow: 2px 2px 2px white;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+.container {
+	margin: 10px 25px 10px 25px;
+}
+
+#label1 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 30px;
+	padding: 15px 20px 15px 0;
+}
+
+#image_selector {
+	border-style: outset;
+	border-radius: 10px;
+	padding: 0 300px 0 0;
+}
+
+.btn-primary {
+	margin: 10px 0 10px 0;
+	padding: 10px 27px 10px 27px;
+	border-radius: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#image_uploaded {
+	width: 50%;
+	height: auto;
+	float: left;
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+.message {
+	width: 50%;
+	float: left;
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	text-align: center;
+	border-style: double;
+	margin: 25px 0 0 -50px;
+	padding: 40px 20px 40px 20px;
+}
+
+footer {
+	clear: both;
+	text-align: center;
+	font-size: 15px;
+}
+
+@media screen and (max-width: 700px) {
+.container {
+	margin: 10px;
+}
+
+#label1 {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	font-size: 20px;
+	margin: 0 0 15px 0;
+}
+
+#image_selector {
+	border-style: outset;
+	border-radius: 10px;
+	padding: 0 70px 0 0;
+	margin-top: 10px;
+}
+
+.btn-primary {
+	margin: 10px 0 10px 0;
+	padding: 10px 27px 10px 27px;
+	border-radius: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+#image_uploaded {
+	margin-top: 10px;
+	margin-bottom: 0px;
+	width: 100%;
+	height: auto;
+}
+
+img {
+	width: 100%;
+}
+.message {
+	width: 100%;
+	float: left;
+	text-align: center;
+	border-style: none;
+	margin: 0 0 15px 0;
+	padding: 20px 0 20px 0;
+}
+
+}
