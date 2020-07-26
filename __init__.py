@@ -10,7 +10,7 @@ from Adhoc_Algo import detect_Adh
 #create a flask app
 app = Flask(__name__)
 #configure the route
-@app.route('/upload-image', methods=['POST','GET'])
+@app.route('/', methods=['POST','GET'])
 
 def upload_image():
 	#default message and image of the homepage
