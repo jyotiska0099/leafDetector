@@ -1,6 +1,6 @@
-LEAF CLASSIFIER VERSION 1.0
+#LEAF CLASSIFIER VERSION 1.0
 
-*****************  READ CAREFULLY TO RUN THE APPLICATION PROPERLY  ******************
+#*****************  READ CAREFULLY TO RUN THE APPLICATION PROPERLY  ******************
 
 
 ## Welcome to the leaf classifier web-app version 1.0
