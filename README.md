@@ -21,7 +21,7 @@ install them using pip or conda, (hint: type in terminal="pip install flask")
 			-public
 				-upload_image.html
 		-Adhoc_Algo.py
-		-main.py
+		-__init__.py
 		-README.md
 
 
@@ -30,11 +30,11 @@ install them using pip or conda, (hint: type in terminal="pip install flask")
 
  1. Start the backend server:
  	1.1 Go inside the app folder 
- 	1.2 type in terminal = "python main.py"
+ 	1.2 type in terminal = "python __init__.py"
  	( The flask server will run at localhost at port 5000 )
  	
  2. Open web browser
- 3. Search in addressbar = "http://localhost:5000/upload-image" (The landing page will show up)
+ 3. Search in addressbar = "http://localhost:5000" (The landing page will show up)
 	< you can also run it in your mobile phone if it's connected in the same wi-Fi network, camera can be also accessed. just in place of localhost write the ip address of your computer (to know it, in linux type "ifconfig", in windows type "ipconfig") >
 
  4. Select an image
