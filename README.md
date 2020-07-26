@@ -6,8 +6,8 @@ LEAF CLASSIFIER VERSION 1.0
 ## Welcome to the leaf classifier web-app version 1.0
 	it takes an image from the user using a web-app, pass it to a server and display the output
 
-## necessary packages to run the flask backend server: flask, opencv-python, numpy, os.
-## install them using pip or conda, (hint: type in terminal="pip install flask")
+necessary packages to run the flask backend server: flask, opencv-python, numpy, os.
+install them using pip or conda, (hint: type in terminal="pip install flask")
 
 ## directory tree till now:
 	-app
@@ -28,7 +28,7 @@ LEAF CLASSIFIER VERSION 1.0
 
 
 
-### To run the application:
+# To run the application:
 
  1. Start the backend server:
  	1.1 Go inside the app folder 
