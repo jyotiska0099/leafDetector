@@ -16,6 +16,7 @@ def upload_image():
 	#default message and image of the homepage
 	msg = "We live in a beautiful world. Filled with amazing things and opportunities yet we hardly acknowledge them. Here you can find some information of the plants around you."
 	imagePath = "static/img/start.jpg"
+	ref = 'static/img/leaf.png'
 
 	#check if data is coming through post request
 	if request.method == "POST":
@@ -28,9 +29,9 @@ def upload_image():
 			img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
 
 			#do some fancy processing
-			msg, imagePath = fun_processing(img)
+			msg, imagePath, ref = fun_processing(img)
 
-	return render_template("public/upload_image.html", message_from_backend=msg, imagePath=imagePath)
+	return render_template("public/upload_image.html", message_from_backend=msg, imagePath=imagePath, matched_image=ref)
 
 def fun_processing(img):
 	
@@ -62,9 +63,10 @@ def fun_processing(img):
 	fileName = os.path.basename(storagePath)
 	filePath = str(storagePath).replace(fileName,'')
 
-	imageResultPath=detect_Adh(fileName, filePath)
+	imageResultPath, ref =detect_Adh(fileName, filePath)
 	#get the path to the txt file 
 	result=imageResultPath+".txt"
+	ref = "static/img/ImageSet/"+ref
 	#open and read the txt file
 	try:
 		with open(result) as f :
@@ -72,7 +74,7 @@ def fun_processing(img):
 	except Exception:
 		msg = 'File not found'
 
-	return msg, storagePath
+	return msg, storagePath, ref
 
 #start the server
 app.run(host='0.0.0.0', port=5000, debug=True)

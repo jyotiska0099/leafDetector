@@ -107,5 +107,5 @@ def detect_Adh(imageName,imagePath):
   F=FileName.split("_", maxsplit=1)[0]
   #print(F)
 
-  return fl+'/'+F
+  return fl+'/'+F, FileName
 
