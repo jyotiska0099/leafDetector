@@ -32,18 +32,17 @@ header {
 	border-radius: 5px;
 	font-family: Arial, Helvetica, sans-serif;
 }
-
 .showImage {
 	padding: 25px 100px;
 }
-#image_uploaded {
+.image_uploaded {
 	width: 50%;
 	height: auto;
 	float: left;
 	margin-top: 25px;
 	margin-bottom: 25px;
 }
-#image_matched {
+.image_matched {
 	width: 50%;
 	height: auto;
 	float: left;
@@ -64,8 +63,8 @@ footer {
 	font-size: 15px;
 }
 
-//For devices like mobile phones and tablets
-@media screen and (max-width: 700px) {
+
+@media screen and (max-width: 900px) {
 .container {
 	margin: 10px;
 }
@@ -90,30 +89,37 @@ footer {
 	font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+	margin: 10px;
+}
 .showImage {
 	padding: 0;
-	width: 100%;
 }
-
-#image_uploaded {
-	width: 100%;
-	height: auto;
-}
-
-#image_matched {
-	width: 100%;
-	height: auto;
-}
-
 img {
 	width: 100%;
 }
+.image_uploaded {
+	width: 100%;
+	height: auto;
+	float: none;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.image_matched {
+	width: 100%;
+	height: auto;
+	float: none;
+	margin-top: 0px;
+	margin-bottom: 5px;
+}
+
 .message {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
 	text-align: center;
 	border-style: none;
-	border-width: 0 0;
-	margin: 0 0 15px 0;
-	padding: 20px 0 20px 0;
+	margin: 0;
+	padding: 0 0 10px 0;
 }
 
 }

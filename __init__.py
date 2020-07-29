@@ -1,6 +1,7 @@
 #Backend Server code -> check the readme file for more info
 #import the necessary packages
 import os
+import natsort
 from flask import Flask, request, Response, render_template
 import numpy as np
 import cv2
@@ -17,6 +18,8 @@ def upload_image():
 	msg = "We live in a beautiful world. Filled with amazing things and opportunities yet we hardly acknowledge them. Here you can find some information of the plants around you."
 	imagePath = "static/img/start.jpg"
 	ref = 'static/img/leaf.png'
+	t1 = ''
+	t2 = ''
 
 	#check if data is coming through post request
 	if request.method == "POST":
@@ -30,8 +33,10 @@ def upload_image():
 
 			#do some fancy processing
 			msg, imagePath, ref = fun_processing(img)
+			t1='Uploaded Image'
+			t2='Matched Image'
 
-	return render_template("public/upload_image.html", message_from_backend=msg, imagePath=imagePath, matched_image=ref)
+	return render_template("public/upload_image.html", message_from_backend=msg, imagePath=imagePath, matched_image=ref, image_tag_1=t1, image_tag_2=t2)
 
 def fun_processing(img):
 	
@@ -41,7 +46,7 @@ def fun_processing(img):
 	resized = cv2.resize(img, dim, interpolation=cv2.INTER_AREA)
 	
 	#find out if the directory is empty or not
-	paths = sorted(os.listdir('static/uploads/'))
+	paths = natsort.natsorted(os.listdir('static/uploads/'))
 	if paths == []:
 		file_number = 1
 	else:
