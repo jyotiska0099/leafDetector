@@ -22,7 +22,9 @@ install them using pip or conda, (hint: type in terminal="pip install flask")
 				-upload_image.html
 		-Adhoc_Algo.py
 		-__init__.py
+		-Procfile
 		-README.md
+		-requirements.txt
 
 
 
