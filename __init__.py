@@ -31,13 +31,14 @@ def upload_image():
 			# decode image
 			img = cv2.imdecode(nparr, cv2.IMREAD_COLOR)
 
-			#do some fancy processing
+			#do some fancy processing in the function
 			msg, imagePath, ref = fun_processing(img)
 			t1='Uploaded Image'
 			t2='Matched Image'
 
 	return render_template("public/upload_image.html", message_from_backend=msg, imagePath=imagePath, matched_image=ref, image_tag_1=t1, image_tag_2=t2)
 
+#The function
 def fun_processing(img):
 	
 	#Resize the image
@@ -82,4 +83,5 @@ def fun_processing(img):
 	return msg, storagePath, ref
 
 #start the server
-app.run(host='0.0.0.0', port=5000, debug=True)
+if __name__ == '__main__':
+	app.run(host='0.0.0.0', port=5000, debug=True)
